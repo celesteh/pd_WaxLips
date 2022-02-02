@@ -1,20 +1,20 @@
-#N canvas 92 90 1306 941 12;
+#N canvas 92 98 1306 941 12;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array lookup-notes 127 float 3 black black;
-#A 0 67 107 42 37 71 32 52 50 42 72 73 47 124 24 39 11 106 6 58 24
-1 40 29 46 105 30 29 73 53 107 60 47 23 95 47 15 40 113 102 37 45 43
-10 91 83 0 125 107 118 56 98 3 95 78 28 97 8 82 76 1 93 74 90 46 2
-25 116 51 14 87 15 119 84 63 103 31 31 10 10 45 120 80 77 43 103 110
-90 65 54 103 42 99 46 68 10 105 97 119 30 57 101 63 96 98 26 6 39 67
-105 71 33 42 13 110 94 120 71 58 76 69 50 31 59 122 117 41 94;
+#A 0 50 73 54 84 24 97 123 51 47 26 79 37 33 50 93 2 41 38 4 7 108
+44 109 35 102 54 59 48 66 120 29 60 66 105 125 68 32 66 31 126 109
+2 60 20 119 109 46 105 43 24 10 91 112 91 70 6 20 100 93 3 37 43 107
+45 86 123 83 96 100 118 98 64 115 16 109 117 114 20 119 114 1 44 81
+50 73 88 59 125 106 122 8 47 84 83 63 108 46 4 63 116 54 17 94 85 33
+103 12 54 4 91 116 25 43 40 35 22 8 118 36 38 9 94 35 95 2 101 18;
 #X coords 0 127 127 -1 200 140 1;
 #X restore 30 130 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array lookup-destinations 127 float 3 black black;
-#A 0 0 1 0 1 1 0 0 1 0 0 1 1 0 0 1 1 1 0 1 1 0 1 0 1 0 0 1 1 1 1 0
-0 1 0 1 0 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 1 0 0 0 0
-0 0 1 1 1 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1
-1 0 0 0 0 0 0 1 0 0 1 1 1 1 1 0 0 0 1 0 1 1 1 0 1 0 1 0;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 15 127 -1 200 140 1;
 #X restore 260 130 graph;
 #X obj 30 80 s lookup-notes;
@@ -91,7 +91,6 @@ the send box;
 #000000 #000000;
 #X obj 790 1100 list prepend connect;
 #X obj 790 1130 list append 6666;
-#X msg 580 420 192.168.4.4;
 #X msg 790 1160 \$1 \$2 \$3;
 #X obj 240 769 - 1;
 #X obj 600 880 delay 0.001;
@@ -106,14 +105,15 @@ in 1991;
 #X obj 510 830 r wax_note;
 #X text 1130 20 Start the piece;
 #X obj 180 518 t b f;
+#X msg 580 420 129.12.186.32;
 #X connect 6 0 33 0;
 #X connect 9 0 12 0;
-#X connect 11 0 64 0;
+#X connect 11 0 76 0;
 #X connect 11 1 6 0;
 #X connect 13 0 11 0;
 #X connect 14 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 76 0;
+#X connect 17 0 75 0;
 #X connect 18 0 46 0;
 #X connect 19 0 45 0;
 #X connect 20 0 21 0;
@@ -132,7 +132,7 @@ in 1991;
 #X connect 29 0 28 0;
 #X connect 29 1 30 1;
 #X connect 29 1 31 1;
-#X connect 32 0 66 0;
+#X connect 32 0 65 0;
 #X connect 36 0 37 0;
 #X connect 37 0 39 0;
 #X connect 38 0 36 0;
@@ -140,7 +140,7 @@ in 1991;
 #X connect 40 0 42 0;
 #X connect 42 0 43 0;
 #X connect 42 0 58 1;
-#X connect 42 0 67 0;
+#X connect 42 0 66 0;
 #X connect 44 0 43 1;
 #X connect 45 0 2 0;
 #X connect 45 0 3 0;
@@ -161,19 +161,19 @@ in 1991;
 #X connect 60 0 61 0;
 #X connect 61 0 55 0;
 #X connect 62 0 63 0;
-#X connect 63 0 65 0;
-#X connect 64 0 33 0;
-#X connect 65 0 54 0;
-#X connect 66 0 28 1;
-#X connect 66 0 23 0;
-#X connect 67 0 58 0;
-#X connect 69 0 72 0;
-#X connect 70 0 71 1;
-#X connect 71 0 73 0;
-#X connect 72 0 71 0;
-#X connect 72 1 70 0;
-#X connect 74 0 58 1;
-#X connect 74 0 67 0;
-#X connect 76 0 23 0;
-#X connect 76 1 25 1;
-#X connect 76 1 27 1;
+#X connect 63 0 64 0;
+#X connect 64 0 54 0;
+#X connect 65 0 28 1;
+#X connect 65 0 23 0;
+#X connect 66 0 58 0;
+#X connect 68 0 71 0;
+#X connect 69 0 70 1;
+#X connect 70 0 72 0;
+#X connect 71 0 70 0;
+#X connect 71 1 69 0;
+#X connect 73 0 58 1;
+#X connect 73 0 66 0;
+#X connect 75 0 23 0;
+#X connect 75 1 25 1;
+#X connect 75 1 27 1;
+#X connect 76 0 33 0;
