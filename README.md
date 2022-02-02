@@ -1,5 +1,6 @@
 # pd_WaxLips
-Based on Wax Lips by Tim Perkis
+Based on Wax Lips by Tim Perkis.
+
 See https://artifactrecordings.bandcamp.com/track/waxlips
 
 ## Setup
