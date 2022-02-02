@@ -1,0 +1,68 @@
+#N canvas 568 169 798 807 12;
+#X obj 40 20 inlet;
+#X obj 700 20 inlet;
+#X obj 110 20 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000 0;
+#X obj 40 50 list prepend 0;
+#X obj 40 80 route 0 1 2 3 4 5 6 7, f 86;
+#X obj 40 110 mtof;
+#X obj 40 139 osc~;
+#X obj 110 350 mtof;
+#X obj 110 430 phasor~;
+#X obj 110 459 *~;
+#X obj 170 430 vline~;
+#X msg 170 400 1 50 \, 0 1000 100;
+#X obj 170 380 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 190 200 mtof;
+#X obj 190 230 phasor~;
+#X obj 250 230 phasor~ 30;
+#X obj 190 259 *~;
+#X obj 690 590 *~;
+#X obj 700 49 / 127;
+#X obj 690 619 dac~;
+#X obj 80 190 vline~;
+#X msg 80 160 1 50 \, 0 1000 100;
+#X obj 80 140 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 40 220 *~;
+#X obj 330 280 vline~;
+#X msg 330 250 1 50 \, 0 1000 100;
+#X obj 330 230 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 190 288 *~;
+#X text 240 30 Use the radio buttons \, the prepend and the route to
+pick your sound;
+#X connect 0 0 3 0;
+#X connect 1 0 18 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 7 0;
+#X connect 4 2 13 0;
+#X connect 5 0 6 0;
+#X connect 5 0 22 0;
+#X connect 6 0 23 0;
+#X connect 7 0 8 0;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 9 0 17 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 13 0 26 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 1;
+#X connect 16 0 27 0;
+#X connect 17 0 19 0;
+#X connect 17 0 19 1;
+#X connect 18 0 17 1;
+#X connect 20 0 23 1;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 17 0;
+#X connect 24 0 27 1;
+#X connect 25 0 24 0;
+#X connect 26 0 25 0;
+#X connect 27 0 17 0;
