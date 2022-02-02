@@ -2,7 +2,7 @@
 Based on Wax Lips by Tim Perkis
 
 ## Setup
-* Set the number box on the upper right to the number of people in your group.
+* Set the number box on the upper center to the number of people in your group.
 * Find the IP addresses of your group mates and create a new message box for each person, which contains their address. Do not include yourself.
 * Change the select box so the list of numbers starts at 0 and gets at least as high as your group size.
 * Connect the outlets of the select box to the inlets of the IP address. Each address should have exactly one connection.
@@ -16,4 +16,4 @@ Possible uses of this file include making a MIDI patch to conect to a different 
 
 ## Play
 
-Someone must send out the first note. The patches will play themselves until collisions or other issues cause the programs to run out of steam. At that point, players may wish to regenerate their lookup tables, change their player and start again.  Or it may be an opportunity to end the performance.
+One player must send out the first note. The patches will play themselves until collisions or other issues cause the programs to run out of steam. At that point, players may wish to regenerate their lookup tables, change their player and start again.  Or it may be an opportunity to end the performance.
