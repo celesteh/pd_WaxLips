@@ -1,4 +1,4 @@
-#N canvas 568 169 798 807 12;
+#N canvas 1992 380 1817 1312 12;
 #X obj 40 20 inlet;
 #X obj 700 20 inlet;
 #X obj 110 20 hradio 15 1 0 8 empty empty empty 0 -8 0 10 #fcfcfc #000000
@@ -33,13 +33,16 @@
 #X obj 190 288 *~;
 #X text 240 30 Use the radio buttons \, the prepend and the route to
 pick your sound;
+#X obj 480 143 wax-player-polysyn-example;
 #X connect 0 0 3 0;
 #X connect 1 0 18 0;
+#X connect 1 0 29 1;
 #X connect 2 0 3 1;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 4 1 7 0;
 #X connect 4 2 13 0;
+#X connect 4 3 29 0;
 #X connect 5 0 6 0;
 #X connect 5 0 22 0;
 #X connect 6 0 23 0;
@@ -66,3 +69,4 @@ pick your sound;
 #X connect 25 0 24 0;
 #X connect 26 0 25 0;
 #X connect 27 0 17 0;
+#X connect 29 0 17 0;
