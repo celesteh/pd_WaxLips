@@ -1,13 +1,12 @@
 #N canvas -2 62 3840 1975 12;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array lookup-notes 127 float 3;
-#A 0 111 45 27 69 59 24 94 18 93 88 46 85 50 80 48 90 67 78 122 35
-107 77 116 114 119 54 58 74 71 35 120 109 115 35 89 100 106 117 90
-122 23 84 58 69 125 49 79 36 100 119 115 64 110 80 96 18 68 100 17
-97 48 28 41 72 67 98 81 52 119 102 29 104 81 97 105 0 2 80 65 110 6
-64 64 8 76 7 113 118 87 11 51 75 92 3 28 117 103 55 85 72 123 72 5
-125 55 106 43 55 117 44 5 0 110 53 111 78 92 12 72 7 25 83 81 125 70
-18 16;
+#A 0 107 18 95 110 120 22 82 16 88 21 105 51 2 22 63 79 114 71 6 37
+111 100 3 97 67 21 25 65 7 81 69 47 94 65 37 105 60 34 113 35 37 36
+9 36 110 80 106 110 5 104 62 92 41 74 81 70 56 79 29 34 101 50 69 36
+5 108 26 103 72 31 30 7 0 106 4 70 97 91 51 49 71 70 72 59 113 41 24
+104 72 18 49 103 33 123 92 58 123 52 35 81 71 59 75 53 38 40 96 35
+41 7 47 47 25 62 73 106 52 111 11 1 114 90 24 91 70 61 96;
 #X coords 0 127 127 -1 200 140 1;
 #X restore 30 130 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
@@ -57,8 +56,6 @@ numbers.;
 #X obj 200 880 tabwrite lookup-destinations;
 #X obj 240 740 r group-size;
 #X obj 530 580 send ip;
-#X text 840 420 Connect the outlets of the select box \, left to right
-\, to the message inlets for your group members.;
 #X text 600 570 Connect all the messages for your group members to
 the send box;
 #X msg 600 680 listen 6666;
@@ -81,7 +78,6 @@ the send box;
 #X obj 580 1139 list prepend send;
 #X obj 580 1168 list trim;
 #X obj 580 1280 netsend -u -b;
-#X obj 580 1070 f 0;
 #X msg 690 1250 disconnect;
 #X text 650 1310 send when connected;
 #X obj 600 920 f;
@@ -97,13 +93,13 @@ the send box;
 in 1991;
 #X obj 1010 10 bng 109 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 1010 190 random;
+#X obj 1010 195 random;
 #X obj 1010 128 t b b;
-#X obj 1010 219 s wax_note;
+#X obj 1010 224 s wax_note;
 #X obj 510 830 r wax_note;
 #X text 1130 20 Start the piece;
 #X obj 180 518 t b f;
-#X obj 1050 160 arraysize lookup-notes;
+#X obj 1050 165 arraysize lookup-notes;
 #X obj 690 800 print;
 #X msg 580 420 129.12.186.23;
 #X obj 370 580 wax-player-example;
@@ -112,16 +108,25 @@ in 1991;
 #X floatatom 524 1312 5 0 0 0 - - - 0;
 #X floatatom 619 1071 5 0 0 0 - - - 0;
 #X obj 600 880 delay 1.1;
+#X msg 555 1028 -1;
+#X obj 580 1070 f -1;
+#X obj 526 998 r init;
+#X text 840 420 Connect the outlets of the select box \, left to right
+\, to the message inlets for your group members. After you connect
+everyone \, click this bang ->;
+#X obj 1178 481 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1178 501 wax-init;
 #X connect 6 0 33 0;
 #X connect 9 0 12 0;
-#X connect 11 0 75 0;
+#X connect 11 0 73 0;
 #X connect 11 1 6 0;
 #X connect 13 0 11 0;
 #X connect 14 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 72 0;
-#X connect 18 0 45 0;
-#X connect 19 0 44 0;
+#X connect 17 0 70 0;
+#X connect 18 0 44 0;
+#X connect 19 0 43 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 25 0;
@@ -138,52 +143,55 @@ in 1991;
 #X connect 29 0 28 0;
 #X connect 29 1 30 1;
 #X connect 29 1 31 1;
-#X connect 32 0 64 0;
-#X connect 36 0 37 0;
-#X connect 37 0 39 0;
-#X connect 38 0 36 0;
-#X connect 39 0 40 0;
-#X connect 40 0 42 0;
-#X connect 40 0 74 0;
-#X connect 42 0 57 1;
-#X connect 42 0 76 0;
-#X connect 42 0 77 0;
-#X connect 43 0 76 1;
-#X connect 44 0 2 0;
-#X connect 44 0 3 0;
-#X connect 45 0 17 0;
-#X connect 46 0 54 1;
-#X connect 46 0 79 0;
-#X connect 47 0 48 0;
-#X connect 49 0 61 0;
+#X connect 32 0 62 0;
+#X connect 35 0 36 0;
+#X connect 36 0 38 0;
+#X connect 37 0 35 0;
+#X connect 38 0 39 0;
+#X connect 39 0 41 0;
+#X connect 39 0 72 0;
+#X connect 41 0 55 1;
+#X connect 41 0 74 0;
+#X connect 41 0 75 0;
+#X connect 42 0 74 1;
+#X connect 43 0 2 0;
+#X connect 43 0 3 0;
+#X connect 44 0 17 0;
+#X connect 45 0 77 0;
+#X connect 45 0 80 1;
+#X connect 46 0 47 0;
+#X connect 48 0 59 0;
+#X connect 49 0 50 0;
 #X connect 50 0 51 0;
-#X connect 51 0 52 0;
-#X connect 52 0 58 0;
-#X connect 53 0 59 0;
-#X connect 53 0 78 0;
-#X connect 54 0 50 0;
-#X connect 55 0 53 0;
-#X connect 57 0 46 0;
-#X connect 57 0 47 0;
-#X connect 58 0 55 0;
-#X connect 58 1 53 0;
+#X connect 51 0 56 0;
+#X connect 52 0 57 0;
+#X connect 52 0 76 0;
+#X connect 53 0 52 0;
+#X connect 55 0 45 0;
+#X connect 55 0 46 0;
+#X connect 56 0 53 0;
+#X connect 56 1 52 0;
+#X connect 57 0 58 0;
+#X connect 58 0 80 0;
 #X connect 59 0 60 0;
-#X connect 60 0 54 0;
-#X connect 61 0 62 0;
-#X connect 62 0 63 0;
-#X connect 63 0 53 0;
-#X connect 64 0 28 1;
-#X connect 64 0 23 0;
-#X connect 66 0 68 0;
-#X connect 67 0 69 0;
-#X connect 68 0 67 0;
-#X connect 68 1 73 0;
-#X connect 70 0 57 1;
-#X connect 70 0 77 0;
-#X connect 72 0 23 0;
-#X connect 72 1 25 1;
-#X connect 72 1 27 1;
-#X connect 73 0 67 1;
-#X connect 75 0 33 0;
-#X connect 77 0 80 0;
-#X connect 80 0 57 0;
+#X connect 60 0 61 0;
+#X connect 61 0 52 0;
+#X connect 62 0 28 1;
+#X connect 62 0 23 0;
+#X connect 64 0 66 0;
+#X connect 65 0 67 0;
+#X connect 66 0 65 0;
+#X connect 66 1 71 0;
+#X connect 68 0 55 1;
+#X connect 68 0 75 0;
+#X connect 70 0 23 0;
+#X connect 70 1 25 1;
+#X connect 70 1 27 1;
+#X connect 71 0 65 1;
+#X connect 73 0 33 0;
+#X connect 75 0 78 0;
+#X connect 78 0 55 0;
+#X connect 79 0 80 1;
+#X connect 80 0 49 0;
+#X connect 81 0 79 0;
+#X connect 83 0 84 0;
