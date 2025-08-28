@@ -1,3 +1,5 @@
+Moved to ocdeberg: https://codeberg.org/celesteh/pd_WaxLips
+
 # pd_WaxLips
 Based on Wax Lips by Tim Perkis.
 
